@@ -1,0 +1,595 @@
+Test Cases of Parabank Website (https://parabank.parasoft.com/parabank/index.htm) 
+
+
+1. Customer Login and Registration
+
+Test Case 1.1: Validate New Customer Registration
+should allow a new user to register successfully
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Click on 'Register' button
+5. Verify 'Signing up is easy!' is visible
+6. Fill details: First name, Last name, Address, City, State, Zip Code, Mobile Number, SSN, Username, Password, Confirm(password).
+7. Click 'Register' button
+8. Verify that 'Welcome [user name]' is visible
+9. Verify that 'Your account was created successfully. You are now logged in.' is visible
+
+Test Case 1.2: Validate Customer Login with Valid Credentials
+should login with valid credentials
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+
+Test Case 1.3: Verify Customer Login with Invalid Credentials
+should display error for invalid credentials
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter incorrect username and password
+6. Click on 'Log In' button
+7. Verify 'Error!' is visible
+8. Verify 'The username and password could not be verified.' is visible
+
+Test Case 1.4: Verify Login Customer Just With Username
+should prompt for missing password when only username is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter username
+6. Click on 'Log In' button
+7. Please enter a username and password.
+
+Test Case 1.5: Validate Password Recovery
+should allow users to recover their password
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Click on 'Forgot login info?' button
+6. Fill details: First name, Last name, Address, City, State, Zip Code, Mobile Number, SSN.
+7. Click 'Find my login info' button
+8. Verify that 'Your login information was located successfully. You are now logged in.' is visible
+
+Test Case 1.6: Verify Password Recovery with Invalid Credentials
+should display error for invalid credentials
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Click on 'Forgot login info?' button
+6. Fill incorrect details: First name, Last name, Address, City, State, Zip Code, Mobile Number, SSN.
+7. Click 'Find my login info' button
+8. Verify that 'The customer information provided could not be found.' is visible
+
+Test Case 1.7: Verify Password Recovery with Empty Credentials
+should display error for empty credentials
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Click on 'Forgot login info?' button
+6. Click 'Find my login info' button
+7. Verify that required inserts is visible
+
+
+2. Account Services
+
+Test Case 2.1: Validate Opening New Checking Account
+should open a new checking account successfully
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Open New Account' button
+9. Verify that openaccount page is displayed
+10. Select CHECKING and account number.
+11. Click 'Open New Account' button
+12. Verify 'Account Opened!' is visible
+13. Verify 'Congratulations, your account is now open.' is visible
+14. Verify 'Your new account number: [...]' is visible
+15. Click on account number
+16. Verify 'Account Details' is visible
+17. Verify 'Account Activity' is visible
+18. Click on 'Funds Transfer Received'
+19. Verify that transaction page is displayed
+20. Verify 'Transaction Details' is visible
+
+Test Case 2.2: Validate Opening New Savings Account
+should open a new savings account successfully
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Open New Account' button
+9. Verify that openaccount page is displayed
+10. Select SAVINGS and account number.
+11. Click 'Open New Account' button
+12. Verify 'Account Opened!' is visible
+13. Verify 'Congratulations, your account is now open.' is visible
+14. Verify 'Your new account number: [...]' is visible
+15. Click on account number
+16. Verify 'Account Details' is visible
+17. Verify 'Account Activity' is visible
+18. Click on 'Funds Transfer Received'
+19. Verify that transaction page is displayed
+20. Verify 'Transaction Details' is visible
+
+
+3. Accounts Overview
+
+Test Case 3.1: Verify Account Details and Transactions Load Correctly
+should verify account details and transactions load correctly
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Accounts Overview' button
+7. Verify that overview page is displayed
+8. Verify that account, account balances, available amounts, and total balance is visible
+9. Click on account number
+10. Verify 'Account Details' is visible
+11. Verify 'Account Activity' is visible
+12. Click on 'Funds Transfer Received'
+13. Verify that transaction page is displayed
+14. Verify 'Transaction Details' is visible
+
+
+4. Transfer Funds
+
+Test Case 4.1: Validate Successful Fund Transfers
+should successfully transfer funds between accounts
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Transfer Funds' button
+9. Verify that transfer page is displayed
+10. Add amount and choose accounts for transfer
+11. Click on 'Transfer' button
+12. Verify 'Transfer Complete!' is visible
+13. Verify '[amount] has been transferred from account [account number] to account [account number].' is visible
+14. Click 'Accounts Overview' button
+15. Verify that overview page is displayed
+16. Verify that account, account balances, available amounts, and total balance is visible
+17. Verify changes between accounts
+
+
+5. Bill Pay
+
+Test Case 5.1: Validate Successful Bill Payment
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Bill Pay' button
+9. Verify that billpay page is displayed
+10. Fill details: Payee Name, Address, City, State, Zip Code, Phone#, Account#, Verify Account #, Amount: $.
+11. Choose account
+12. Click 'Send Payment' button
+13. Verify 'Bill Payment Complete' is visible
+14. Verify 'Bill Payment to [name] in the amount of [amount] from account [number] was successful.' is visible
+15. Click 'Accounts Overview' button
+16. Verify that overview page is displayed
+17. Verify that account, account balances, available amounts, and total balance is visible
+18. Verify changes between accounts
+
+Test Case 5.2: Validate Unsuccessful Bill Payment
+should display an error for a negative bill payment amount
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Bill Pay' button
+9. Verify that billpay page is displayed
+10. Fill details: Payee Name, Address, City, State, Zip Code, Phone#, Account#, Verify Account #, Amount$ [fill negative number].
+11. Choose account
+12. Click 'Send Payment' button
+13. Verify error is visible
+
+Test Case 5.3: Validate Empty Bill Payment Submission
+should display required field warnings when bill payment form is empty
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Bill Pay' button
+9. Verify that billpay page is displayed
+10. Click 'Send Payment' button
+11. Verify required warnings is displayed
+
+
+6. Find Transactions
+
+Test Case 6.1: Verify Transaction Search by ID Returns Correct Results
+should search for a transaction using a valid ID and display matching results"
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Enter ID
+12. Click 'Find Transactions' button
+13. Verify ID transaction is visible
+
+Test Case 6.2: Validate Incorrect Search For Transaction By ID
+should display an error when an invalid transaction ID is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Enter incorrect ID
+12. Click 'Find Transactions' button
+13. Verify warning is displayed
+
+Test Case 6.3: Validate Empty Search For Transaction By ID
+should display a required field warning when no transaction ID is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Click 'Find Transactions' button
+12. Verify required warning is displayed
+
+Test Case 6.4: Verify Transaction Search by Date Returns Correct Results
+should search for transactions using a valid date and display matching results
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Enter Date
+12. Click 'Find Transactions' button on section 'Find by Date'
+13. Verify Transaction Results by Date is visible
+
+Test Case 6.5: Validate Incorrect Search For Transaction By Date
+should display an error when an invalid date is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Enter incorrect Date
+12. Click 'Find Transactions' button on section 'Find by Date'
+13. Verify warning is displayed
+
+Test Case 6.6: Validate Empty Search For Transaction by Date
+should display a required field warning when no date is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Click 'Find Transactions' button on section 'Find by Date'
+12. Verify required warning is displayed
+
+Test Case 6.7: Verify Transaction Search by Date Range Returns Correct Results
+should search for transactions using a valid date range and display matching results
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Enter Date Range
+12. Click 'Find Transactions' button on section 'Find by Date Range'
+13. Verify Transaction Results by Date Range is visible
+
+Test Case 6.8: Validate Incorrect Search For Transaction By Date Range
+should display an error when an invalid date range is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Enter incorrect Date Range
+12. Click 'Find Transactions' button on section 'Find by Date Range'
+13. Verify warning is displayed
+
+Test Case 6.9: Validate empty search for transaction by Date Range
+should display a required field warning when no date range is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Click 'Find Transactions' button on section 'Find by Date Range'
+12. Verify required warning is displayed
+
+Test Case 6.10: Verify Transaction Search by Amount Returns Correct Results
+should search for transactions using a valid amount and display matching results
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Enter Amount
+12. Click 'Find Transactions' button on section 'Find by Amount'
+13. Verify Transaction Results by Amount is visible
+
+Test Case 6.11: Validate Incorrect Search For Transaction By Amount
+should display an error when an invalid amount is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Enter incorrect Amount
+12. Click 'Find Transactions' button on section 'Find by Amount'
+13. Verify warning is displayed
+
+Test Case 6.12: Validate Empty Search For Transaction By Amount
+should display a required field warning when no amount is entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Find Transactions' button
+9. Verify that findtrans page is displayed
+10. Select account
+11. Click 'Find Transactions' button on section 'Find by Amount'
+12. Verify required warning is displayed
+
+
+7. Update Contact Info
+
+Test Case 7.1: Validate Successful Contact Info Update
+should update contact information successfully
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Update Contact Info' button
+9. Verify that updateprofile page is displayed
+10. Update profile
+11. Click 'Update profile' button
+12. Verify successful update
+
+Test Case 7.2: Validate Empty Contact Info Update
+should display required warnings when contact info is empty
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Update Contact Info' button
+9. Verify that updateprofile page is displayed
+10. Delete all information
+11. Click 'Update profile' button
+12. Verify required warning is displayed
+
+8. Request Loan
+
+Test Case 8.1: Validate Successful Loan Request
+should process a loan request successfully and update account information
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Request Loan' button
+9. Verify that requestloan page is displayed
+10. Enter Loan Amount and Down Payment
+11. Choose account
+12. Click 'Apply Now' button
+13. Verify 'Loan Request Processed' is visible
+14. Click on account number
+15. Verify 'Account Details' is visible
+16. Click 'Accounts Overview' button
+17. Verify that overview page is displayed
+18. Verify that account, account balances, available amounts, and total balance is visible
+19. Verify changes between accounts
+
+Test Case 8.2: Validate Unsuccessful Loan Request
+should process a loan request unsuccessfully and display a denial message
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Request Loan' button
+9. Verify that requestloan page is displayed
+10. Enter Loan Amount and Down Payment
+11. Choose account
+12. Click 'Apply Now' button
+13. Verify 'Loan Request Processed' is visible
+14. Verify Denied is visible
+
+Test Case 8.3: Validate Empty Loan Request
+should display required warnings when no loan details are entered
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Request Loan' button
+9. Verify that requestloan page is displayed
+11. Choose account
+12. Click 'Apply Now' button 
+13. Verify warning is displayed
+
+
+9. Log Out
+
+Test Case 9.1: Validate Costumer Log Out
+should log out the customer and display the home page
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Verify 'Customer Login' is visible
+5. Enter correct username and password
+6. Click on 'Log In' button
+7. Verify that 'Welcome [user FirstName LastName]' is visible
+8. Click 'Log Out' button
+9. Verify home page is visible
+
+
+10. Customer Care
+
+Test Case 10.1: Validate Successful Submission Of Customer Care Requests From Top Navigation
+should successfully submit a customer care request from top navigation
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Click on letter icon
+5. Verify that contact page is visible successfully
+6. Enter name, email, phone, message
+7. Click 'Send to customer care' button
+8. Verify 'Thank you [entered name]. A Customer Care Representative will be contacting you.' is visible
+
+Test Case 10.2: Validate Successful Submission Of Customer Care Requests From Bottom Navigation
+should successfully submit a customer care request from bottom navigation
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Click on 'Contact Us' in bottom navigation
+5. Verify that contact page is visible successfully
+6. Enter name, email, phone, message
+7. Click 'Send to customer care' button
+8. Verify 'Thank you [entered name]. A Customer Care Representative will be contacting you.' is visible
+
+Test Case 10.3: Validate Empty Submission Of Customer Care Requests From Bottom Navigation
+should display required warnings when no contact details are provided
+1. Launch browser
+2. Navigate to url 'https://parabank.parasoft.com/parabank/index.htm'
+3. Verify that home page is visible successfully
+4. Click on 'Contact Us' in bottom navigation
+5. Verify that contact page is visible successfully
+7. Click 'Send to customer care' button
+8. Verify required warnings is displayed
+
+
+11. Website Performance and Usability
+
+Test Case 11.1: Verify Mobile Responsiveness and Accessibility
+should display correctly on mobile devices and pass accessibility checks
+1. Launch browser and resize it to mobile size
+2. Navigate to the login page
+3. Verify that the login form is still accessible and usable
+4. Navigate to 'Accounts Overview' and check that account details are visible without layout breakage
+5. Launch browser and resize it to tablet size
+6. Navigate to the login page
+7. Verify that the login form is still accessible and usable
+8. Navigate to 'Accounts Overview' and check that account details are visible without layout breakage
+
+Test Case 11.2: Verify Tablet Responsiveness and Accessibility
+should display correctly on tablet devices and pass accessibility checks
+1. Launch browser and resize it to tablet size
+2. Navigate to the login page
+3. Verify that the login form is still accessible and usable
+4. Navigate to 'Accounts Overview' and check that account details are visible without layout breakage
+5. Launch browser and resize it to tablet size
+6. Navigate to the login page
+7. Verify that the login form is still accessible and usable
+8. Navigate to 'Accounts Overview' and check that account details are visible without layout breakage
+
+Test Case 11.3: Verify All Navigation Links Are Functional
+1. Launch browser
+2. Navigate to URL 'https://parabank.parasoft.com/parabank/index.htm'
+3. Use an automated tool or manual checking to verify all navigation links are functional
+4. Click on each link and verify that they open the correct page
+5. Verify that no 404 or broken link errors occur
+
+Test Case 11.4: Verify Page Load Speed is Under 5 Seconds
+1. Launch browser
+2. Navigate to URL 'https://parabank.parasoft.com/parabank/index.htm'
+3. Measure page load time (should be < 5 seconds)
+4. If load time exceeds 5 seconds, log the issue
+
