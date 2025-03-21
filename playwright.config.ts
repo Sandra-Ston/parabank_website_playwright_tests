@@ -34,7 +34,6 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    testResultsDir: 'test-results',
   },
 
   /* Configure projects for major browsers */
